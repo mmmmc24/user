@@ -9,7 +9,6 @@ function redirect () {
 window.location.href = "https://www.google.com/"
 	}
 $(document).ready(function () {
-$(".bin").click(function () {
 var datastring = $("#Form").serialize();
 $.ajax({
     type: "POST",
@@ -21,7 +20,7 @@ $.ajax({
   },
 
 });
-});
+
 });
 
 </script>
